@@ -46,8 +46,10 @@
           <div class="entry-sub">Enter your name to begin the journey...</div>
         </div>
       </div>
-      <input class="name-input" id="nameInput" type="text" placeholder="Enter your player name..." maxlength="20"
+   <div class="name" >
+       <input class="name-input" id="nameInput" type="text" placeholder="Enter your player name..." maxlength="20"
         autocomplete="off">
+      <div class="name-error-msg" id="nameError" role="alert" aria-live="polite"></div>
       <div class="avatar-toggle" id="avatarToggle">
         <span>🎨</span>
         <span id="avatarToggleText">Choose avatar</span>
@@ -60,6 +62,7 @@
       <div style="display:flex;gap:.8rem;margin-top:1.3rem">
         <button class="btn" id="nameSubmitBtn" style="flex:1">ENTER WORLD →</button>
       </div>
+    </div>  
     </div>  
 
   <!-- LEVEL SELECT SCREEN -->
@@ -554,6 +557,7 @@
   </div>
 
   <!-- ACHIEVEMENT TOAST CONTAINER -->
+  <div id="notificationBox" class="notification-box" role="status" aria-live="polite" aria-atomic="true"></div>
   <div id="achievement-toast-container"
     style="position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 1000; pointer-events: none;">
   </div>
